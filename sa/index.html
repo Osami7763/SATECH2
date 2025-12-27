@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#006C35">
+    <title>فريق ساتيك</title>
+    
+    <!-- الروابط الخارجية -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- رابط ملف CSS الخاص بنا -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header class="header">
+        <a class="logo" href="#home">
+            <img src="assets/logo.jpg" alt="شعار ساتيك" width="40" height="40" 
+                 onerror="this.src='https://via.placeholder.com/40/006C35/ffffff?text=S'">
+            <span>ساتيك</span>
+        </a>
+        
+        <!-- قائمة التنقل الأساسية - مفتوحة دائمًا -->
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li>
+                    <a href="#home" data-translate="home">
+                        <i class="fa-solid fa-house"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" data-translate="about">
+                        <i class="fa-solid fa-users"></i>
+                        <span>من نحن</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" data-translate="projects">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <span>المشاريع</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" data-translate="contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>تواصل معنا</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="menu-container">
+            <button id="lang-switcher" class="lang-switcher">
+                <i class="fa-solid fa-globe"></i>
+                <span>EN</span>
+            </button>
+            <!-- إخفاء زر الهامبرغر -->
+            <button id="hamburger" class="hamburger" style="display: none;">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <main class="hero" id="home">
+        <h1 data-translate="heroTitle">فريق ساتيك السعودي</h1>
+        <p data-translate="heroText">نُطوّر مشاريع وأفكار تقنية سعودية تصنع أثرًا حقيقيًا.</p>
+        <button class="learn-more" id="discoverBtn">
+            <span class="circle"><span class="icon arrow"></span></span>
+            <span class="button-text" data-translate="discover">اكتشفنا</span>
+        </button>
+    </main>
+
+    <!-- قسم من نحن -->
+    <section class="page" id="about">
+        <h1 data-translate="aboutTitle">من نحن</h1>
+        <p data-translate="aboutText">ساتيك فريق سعودي شغوف بالتقنية وريادة الأعمال. نحول الأفكار إلى منتجات رقمية عملية بجودة عالية وتجربة استخدام ممتازة.</p>
+        <ul class="features-list">
+            <li data-translate="values"><i class="fa-solid fa-check-circle"></i> قيمنا: الاحترافية، الشفافية، روح الفريق.</li>
+            <li data-translate="domains"><i class="fa-solid fa-check-circle"></i> مجالاتنا: الويب، أدوات تعليمية، حلول ذكية.</li>
+            <li data-translate="goal"><i class="fa-solid fa-check-circle"></i> هدفنا: منتج عربي يفخر به المستخدم.</li>
+        </ul>
+        <button class="learn-more" style="width: 14rem;" id="teamBtn">
+            <span class="circle"><span class="icon arrow"></span></span>
+            <span class="button-text" data-translate="team">تعرف على الفريق</span>
+        </button>
+    </section>
+
+    <!-- قسم المشاريع -->
+    <section class="page" id="projects">
+        <h1 data-translate="projectsTitle">المشاريع</h1>
+        <button class="accordion" data-translate="project1">Satech education</button>
+        <div class="panel">
+            <p data-translate="project1Desc">لوحة تحكم مدرسية ذكية، صممت لإدارة المدرسة بسهولة وفاعلية، تجمع كل المعلومات والمهام في مكان واحد.</p>
+        </div>
+        <button class="accordion" data-translate="project2">موسوعة تفاعلية</button>
+        <div class="panel">
+            <p data-translate="project2Desc">موسوعة تفاعلية سعودية، تجمع المعرفة المحلية بطريقة ديناميكية تسمح للمستخدمين بالتفاعل والاكتشاف.</p>
+        </div>
+        <button class="accordion" data-translate="project3">Satech OS</button>
+        <div class="panel">
+            <p data-translate="project3Desc">نظام تشغيل سعودي بالكامل، صُمم ليعكس رؤية المملكة في الاعتماد على حلول وطنية مستقلة وآمنة.</p>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section class="page" id="contact">
+        <h1 data-translate="contactTitle">تواصل معنا</h1>
+        <div class="social-grid">
+            <a class="social-card tiktok" href="https://www.tiktok.com/@projectsatech" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+                <div class="text">
+                    <h3 class="title" data-translate="tiktokTitle">تيك توك</h3>
+                    <p class="desc" data-translate="tiktokDesc">مشاريع الفريق ولقطات ممتعة</p>
+                </div>
+            </a>
+            <a class="social-card discord" href="https://discord.com/invite/yMbkN4jT" target="_blank">
+                <i class="fa-brands fa-discord"></i>
+                <div class="text">
+                    <h3 class="title" data-translate="discordTitle">دِسكورد</h3>
+                    <p class="desc" data-translate="discordDesc">سيرفر المجتمع—انضم وتابع كل جديد</p>
+                </div>
+            </a>
+            <a class="social-card x" href="#" id="xLink">
+                <i class="fa-brands fa-x-twitter"></i>
+                <div class="text">
+                    <h3 class="title" data-translate="xTitle">X</h3>
+                    <p class="desc" data-translate="xDesc">أحدث الأخبار والتحديثات</p>
+                </div>
+            </a>
+            <a class="social-card instagram" href="#" id="instagramLink">
+                <i class="fa-brands fa-instagram"></i>
+                <div class="text">
+                    <h3 class="title" data-translate="instagramTitle">إنستجرام</h3>
+                    <p class="desc" data-translate="instagramDesc">لحظات خلف الكواليس وصور المشاريع</p>
+                </div>
+            </a>
+            <a class="social-card email" href="#" id="emailLink">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="text">
+                    <h3 class="title" data-translate="emailTitle">البريد الإلكتروني</h3>
+                    <p class="desc" data-translate="emailDesc">للتواصل الرسمي والاستفسارات</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p data-translate="footer">© 2025 جميع الحقوق محفوظة - فريق ساتيك</p>
+    </footer>
+
+    <!-- نافذة منبثقة -->
+    <div id="dynamicPopup" class="popup-menu">
+        <div class="popup-header">
+            <i id="popupIcon"></i>
+            <h3 id="popupTitle"></h3>
+        </div>
+        <div class="popup-content">
+            <p id="popupMessage"></p>
+            <div class="popup-actions" id="popupActions"></div>
+            <div class="popup-countdown">
+                <i class="fa-solid fa-clock"></i>
+                <span id="countdownText">ستُغلق هذه النافذة تلقائيًا خلال <span id="countdownNumber">2</span> ثانية</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- رابط ملف JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
